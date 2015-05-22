@@ -24,11 +24,11 @@ import java.util.List;
  */
 public interface GitHubService {
 
-    @Headers("User-Agent: awestome-android-rx-test")
-    @GET("/repositories")
-    public List<Repository> getAllRepositories(@Query("since") String since);
+  @Headers("User-Agent: awestome-android-rx-test")
+  @GET("/repositories")
+  public List<Repository> getAllRepositories(@Query("since") String since);
 
-    @Headers("User-Agent: awestome-android-rx-test")
-    @GET("/repositories")
-    public Observable<List<Repository>> rxGetAllRepositories(@Query("since") String since);
+  @Headers("User-Agent: awestome-android-rx-test")
+  @GET("/repositories")
+  public Observable<List<Repository>> rxGetAllRepositories(@Query("since") String since);
 }
