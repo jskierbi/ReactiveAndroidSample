@@ -2,7 +2,6 @@ package com.jskierbi.reactiveandroidsample.ui.bus;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import com.jskierbi.reactiveandroidsample.App;
@@ -23,7 +22,7 @@ public class BusActivity extends AppCompatActivity {
 
   @Inject
   @ForActivity
-  CachedEventBus mCachedEventBus;
+  CachedEventBus mBus;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +39,18 @@ public class BusActivity extends AppCompatActivity {
     return mActivityComponent;
   }
 
-  @OnClick(R.id.btn_produce)
+  @OnClick(R.id.btn_produce_str)
   void produceClick() {
-    Log.d(TAG, "event bus: " + mCachedEventBus);
+    mBus.post("Hello!");
+  }
+
+  @OnClick(R.id.btn_produce_producable)
+  void produceProducableClick() {
+    mBus.post(new PublishableData("Oh, hello", "I'm THE publishable data!"));
+  }
+
+  @OnClick(R.id.btn_clear_cached)
+  void clearCached() {
+    mBus.clearCached();
   }
 }

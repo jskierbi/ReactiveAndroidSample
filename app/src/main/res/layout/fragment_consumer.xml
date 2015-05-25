@@ -7,15 +7,27 @@
     tools:context=".MainActivity">
 
   <Button
-      android:id="@+id/btn_register"
+      android:id="@+id/btn_register_str"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="register" />
+      android:text="register for str" />
+
+  <Button
+      android:id="@+id/btn_register_publishable"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="register publishable" />
 
   <Button
       android:id="@+id/btn_unregister"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="unregister" />
+
+  <Button
+      android:id="@+id/btn_debug_dump_cached"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="debug dump cached" />
 
 </LinearLayout>

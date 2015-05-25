@@ -19,9 +19,21 @@
       android:background="@android:color/black" />
 
   <Button
-      android:id="@+id/btn_produce"
+      android:id="@+id/btn_produce_str"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="produce" />
+      android:text="produce str" />
+
+  <Button
+      android:id="@+id/btn_produce_producable"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="produce producable" />
+
+  <Button
+      android:id="@+id/btn_clear_cached"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="clear cached" />
 
 </LinearLayout>

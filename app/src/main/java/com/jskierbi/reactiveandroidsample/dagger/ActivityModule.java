@@ -23,4 +23,5 @@ public class ActivityModule {
   public CachedEventBus provideChachedEventBus(CachedEventBus cachedEventBus) {
     return cachedEventBus;
   }
+
 }
