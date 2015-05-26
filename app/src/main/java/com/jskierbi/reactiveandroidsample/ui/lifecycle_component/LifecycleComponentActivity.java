@@ -36,6 +36,10 @@ public class LifecycleComponentActivity extends AppCompatActivity {
 	}
 
 	@OnClick(R.id.btn_start_activity_for_result) void startActivityForResultClick() {
-
+		mGoogleApiClientManager.startActivityForResult();
 	}
+
+//	@Override protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//		super.onActivityResult(requestCode, resultCode, data);
+//	}
 }
