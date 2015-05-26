@@ -11,17 +11,23 @@ import dagger.Provides;
 @Module
 public class ActivityModule {
 
-  private final Activity mActivity;
+	private final Activity mActivity;
 
-  public ActivityModule(Activity mActivity) {
-    this.mActivity = mActivity;
-  }
+	public ActivityModule(Activity mActivity) {
+		this.mActivity = mActivity;
+	}
 
-  @Provides
-  @ActivityScope
-  @ForActivity
-  public CachedEventBus provideChachedEventBus(CachedEventBus cachedEventBus) {
-    return cachedEventBus;
-  }
+	@Provides
+	@ActivityScope
+	public Activity provideActivity() {
+		return mActivity;
+	}
+
+	@Provides
+	@ActivityScope
+	@ForActivity
+	public CachedEventBus provideChachedEventBus(CachedEventBus cachedEventBus) {
+		return cachedEventBus;
+	}
 
 }
