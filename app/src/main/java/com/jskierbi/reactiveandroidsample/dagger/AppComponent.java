@@ -6,10 +6,11 @@ import dagger.Component;
 /**
  * Created by jakub on 25/05/15.
  */
+@ApplicationScope
 @Component(modules = {AppModule.class})
 public interface AppComponent {
 
-  ActivityComponent plusActivityComponent(ActivityModule activityModule);
+	ActivityComponent plusActivityComponent(ActivityModule activityModule);
 
-  void inject(App app);
+	void inject(App app);
 }

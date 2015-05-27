@@ -2,6 +2,7 @@ package com.jskierbi.reactiveandroidsample.dagger;
 
 import com.jskierbi.reactiveandroidsample.ui.bus.BusActivity;
 import com.jskierbi.reactiveandroidsample.ui.bus.ConsumerFragment;
+import com.jskierbi.reactiveandroidsample.ui.event_driven_retry.RetryActivity;
 import com.jskierbi.reactiveandroidsample.ui.lifecycle_component.LifecycleComponentActivity;
 import dagger.Subcomponent;
 
@@ -17,4 +18,6 @@ public interface ActivityComponent {
   void inject(LifecycleComponentActivity lifecycleComponentActivity);
 
   void inject(ConsumerFragment consumerFragment);
+
+  void inject(RetryActivity retryActivity);
 }
